@@ -1,10 +1,11 @@
 {
-    "name": "nwidart/photo",
+    "name": "softici/photo-module",
     "description": "",
+    "type": "laravel-module",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "Michael Dojčár",
+            "email": "dojcar@softici.cz"
         }
     ],
     "extra": {
