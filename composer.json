@@ -21,5 +21,8 @@
         "psr-4": {
             "Modules\\Photo\\": ""
         }
+    },
+    "require": {
+        "bkwld/croppa": "^4.9"
     }
 }

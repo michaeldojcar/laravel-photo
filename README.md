@@ -15,7 +15,9 @@ $photo->url();
 ```
 
 ## Get resized photo in blade
-WIP
-```
+```php
+use Modules\Gallery\Entities\Photo;
 
+$photo = Photo::findOrFail(1);
+$photo->resize(250, 120); // Specify width and height
 ```
