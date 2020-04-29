@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card-header">Přiřazené fotografieaa
+    <div class="card-header">Přiřazené fotografie
         <a href="#"
            class="btn btn-success btn-sm float-right"
            data-toggle="modal"
