@@ -12,6 +12,17 @@
                     <img class="img-fluid img-thumbnail"
                          src="{{$photo->size(220, 220)}}">
                 </div>
+                <form method="POST"
+                      action="{{route('items::items.photo.delete',$model)}}">
+                    @csrf
+                    <input type="hidden" name="photo_id" value={{$photo->id}}>
+                    <input
+                        type="submit"
+                        class="btn btn-success"
+                        value="delete">
+
+
+                </form>
             @endforeach
         </div>
     </div>

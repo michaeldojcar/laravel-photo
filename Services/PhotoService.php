@@ -20,9 +20,9 @@ class PhotoService
     /**
      * Add new photo.
      *
-     * @param string       $name
+     * @param string $name
      * @param UploadedFile $file
-     * @param string       $description
+     * @param string $description
      *
      * @return Photo
      */
@@ -47,7 +47,7 @@ class PhotoService
     /**
      * Update photo.
      *
-     * @param Photo  $photo
+     * @param Photo $photo
      * @param string $name
      * @param string $description
      *
@@ -73,9 +73,7 @@ class PhotoService
     public function delete(Photo $photo): bool
     {
         $photo->delete();
-
         Storage::delete('public/' . $photo->path);
-
         return true;
     }
 }
