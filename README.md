@@ -21,3 +21,9 @@ use Modules\Gallery\Entities\Photo;
 $photo = Photo::findOrFail(1);
 $photo->resize(250, 120); // Specify width and height
 ```
+
+
+## Implementing photo upload into your modules
+```
+@component('photo::components.add_modal', ['model' => $item, 'action' => 'items::items.photo.store'])@endcomponent
+```
