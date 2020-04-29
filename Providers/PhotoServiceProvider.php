@@ -2,8 +2,8 @@
 
 namespace Modules\Photo\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Illuminate\Support\ServiceProvider;
 
 class PhotoServiceProvider extends ServiceProvider
 {
@@ -16,6 +16,7 @@ class PhotoServiceProvider extends ServiceProvider
      * @var string $moduleNameLower
      */
     protected $moduleNameLower = 'photo';
+
 
     /**
      * Boot the application events.
@@ -31,6 +32,7 @@ class PhotoServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/Migrations'));
     }
 
+
     /**
      * Register the service provider.
      *
@@ -41,6 +43,7 @@ class PhotoServiceProvider extends ServiceProvider
         $this->app->register(RouteServiceProvider::class);
     }
 
+
     /**
      * Register config.
      *
@@ -48,13 +51,19 @@ class PhotoServiceProvider extends ServiceProvider
      */
     protected function registerConfig()
     {
+
         $this->publishes([
             module_path($this->moduleName, 'Config/config.php') => config_path($this->moduleNameLower . '.php'),
+            module_path($this->moduleName, 'Config/croppa.php') => config_path('croppa.php'),
+
+
         ], 'config');
+
         $this->mergeConfigFrom(
             module_path($this->moduleName, 'Config/config.php'), $this->moduleNameLower
         );
     }
+
 
     /**
      * Register views.
@@ -68,11 +77,12 @@ class PhotoServiceProvider extends ServiceProvider
         $sourcePath = module_path($this->moduleName, 'Resources/views');
 
         $this->publishes([
-            $sourcePath => $viewPath
+            $sourcePath => $viewPath,
         ], ['views', $this->moduleNameLower . '-module-views']);
 
         $this->loadViewsFrom(array_merge($this->getPublishableViewPaths(), [$sourcePath]), $this->moduleNameLower);
     }
+
 
     /**
      * Register translations.
@@ -83,12 +93,16 @@ class PhotoServiceProvider extends ServiceProvider
     {
         $langPath = resource_path('lang/modules/' . $this->moduleNameLower);
 
-        if (is_dir($langPath)) {
+        if (is_dir($langPath))
+        {
             $this->loadTranslationsFrom($langPath, $this->moduleNameLower);
-        } else {
+        }
+        else
+        {
             $this->loadTranslationsFrom(module_path($this->moduleName, 'Resources/lang'), $this->moduleNameLower);
         }
     }
+
 
     /**
      * Register an additional directory of factories.
@@ -97,10 +111,12 @@ class PhotoServiceProvider extends ServiceProvider
      */
     public function registerFactories()
     {
-        if (! app()->environment('production') && $this->app->runningInConsole()) {
+        if ( ! app()->environment('production') && $this->app->runningInConsole())
+        {
             app(Factory::class)->load(module_path($this->moduleName, 'Database/factories'));
         }
     }
+
 
     /**
      * Get the services provided by the provider.
@@ -112,14 +128,18 @@ class PhotoServiceProvider extends ServiceProvider
         return [];
     }
 
+
     private function getPublishableViewPaths(): array
     {
         $paths = [];
-        foreach (\Config::get('view.paths') as $path) {
-            if (is_dir($path . '/modules/' . $this->moduleNameLower)) {
+        foreach (\Config::get('view.paths') as $path)
+        {
+            if (is_dir($path . '/modules/' . $this->moduleNameLower))
+            {
                 $paths[] = $path . '/modules/' . $this->moduleNameLower;
             }
         }
+
         return $paths;
     }
 }

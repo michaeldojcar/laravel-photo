@@ -5,6 +5,13 @@ It provides Photo model controlled using `Services\PhotoService` class.
 
 Photos are stored in Laravel public storage and their metadata in database (`photos` table).
 
+## Install
+```
+php artisan acore:module
+
+php artisan vendor:publish --provider=Modules\Photo\Providers\PhotoServiceProvider
+```
+
 ## Access photo
 Get photo public url:
 ```php

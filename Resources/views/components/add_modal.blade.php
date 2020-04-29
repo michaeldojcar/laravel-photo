@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card-header">Přiřazené fotografie
+    <div class="card-header">Přiřazené fotografieaa
         <a href="#"
            class="btn btn-success btn-sm float-right"
            data-toggle="modal"
@@ -9,15 +9,17 @@
         <div class="row">
             @foreach($model->photos as $photo)
                 <div class="col-4">
-                    <img class="img-thumbnail"
-                         src="{{$photo->size(200, 150)}}">
+                    <img class="img-fluid img-thumbnail"
+                         src="{{$photo->size(220, 220)}}">
                 </div>
             @endforeach
         </div>
     </div>
 </div>
 
-<form action="{{route($action, $model)}}" enctype="multipart/form-data" method="POST">
+<form action="{{route($action, $model)}}"
+      enctype="multipart/form-data"
+      method="POST">
     @csrf
     <div class="modal fade"
          id="exampleModal"
@@ -30,8 +32,12 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nahrávání fotky</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title"
+                        id="exampleModalLabel">Nahrávání fotky</h5>
+                    <button type="button"
+                            class="close"
+                            data-dismiss="modal"
+                            aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -40,7 +46,8 @@
                     <div class="form-group">
                         <label>Vyberte fotografii</label>
                         <input type="file"
-                               name="photo" class="form-control-file">
+                               name="photo"
+                               class="form-control-file">
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -49,7 +56,8 @@
                             data-dismiss="modal">Storno
                     </button>
                     <input type="submit"
-                            class="btn btn-primary" value="Nahrát">
+                           class="btn btn-primary"
+                           value="Nahrát">
                 </div>
             </div>
         </div>
