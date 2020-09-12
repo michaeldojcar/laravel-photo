@@ -2,7 +2,7 @@
     "name": "softici/photo-module",
     "description": "",
     "type": "laravel-module",
-    "licence": "MIT",
+    "license": "MIT",
     "authors": [
         {
             "name": "Michael Dojčár",
