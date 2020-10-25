@@ -9,8 +9,10 @@
         <div class="row">
             @foreach($model->photos as $photo)
                 <div class="col-4">
-                    <img class="img-fluid img-thumbnail"
-                         src="{{$photo->size(220, 220)}}">
+                                       <div style="height: 220px; width: 220px">
+                        <img style="width: 100%; height: 100%;"
+                             src="{{'/storage/'.$photo->path}}">
+                    </div>
                 </div>
                 <form method="POST"
                       action="{{route('items::items.photo.delete',$model)}}">
