@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MichaelDojcar\\LaravelPhoto\\": "src"
+            "MichaelDojcar\\LaravelPhoto\\": "src/"
         }
     },
     "require": {
