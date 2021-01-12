@@ -3,9 +3,7 @@
 namespace MichaelDojcar\LaravelPhotos\Photo\Entities;
 
 use Croppa;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Carbon;
 
 /**
  * Class Photo
