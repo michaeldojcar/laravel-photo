@@ -11,7 +11,7 @@ use Modules\Photo\Entities\Photo;
 /**
  * Class PhotoService
  *
- * Manages photos (save them to storage and model).
+ * Manipulate with Photo model.
  *
  * @package App\Gallery
  */

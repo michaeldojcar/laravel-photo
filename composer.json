@@ -1,18 +1,18 @@
 {
-    "name": "michaeldojcar/photo-module",
+    "name": "michaeldojcar/laravel-photo",
     "description": "",
-    "type": "laravel-module",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Michael Dojčár",
-            "email": "dojcar@softici.cz"
+            "email": "michaeldojcar@gmail.com"
         }
     ],
     "extra": {
         "laravel": {
             "providers": [
-                "Modules\\Photo\\Providers\\PhotoServiceProvider"
+                "MichaelDojcar\\LaravelPhoto\\Providers\\PhotoServiceProvider"
             ],
             "aliases": {
 
@@ -21,10 +21,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Modules\\Photo\\": ""
+            "MichaelDojcar\\LaravelPhoto\\": "src"
         }
     },
     "require": {
         "bkwld/croppa": "^4.9"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
     }
 }
