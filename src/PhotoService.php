@@ -1,12 +1,12 @@
 <?php
 
 
-namespace MichaelDojcar\LaravelPhotos;
+namespace MichaelDojcar\LaravelPhoto;
 
 use Exception;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
-use MichaelDojcar\LaravelPhotos\Photo\Entities\Photo;
+use MichaelDojcar\LaravelPhoto\Models\Photo;
 
 /**
  * Class PhotoService

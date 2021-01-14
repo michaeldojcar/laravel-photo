@@ -1,34 +1,33 @@
 {
-    "name": "michaeldojcar/laravel-photo",
-    "description": "",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Michael Dojčár",
-            "email": "michaeldojcar@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "MichaelDojcar\\LaravelPhoto\\Providers\\PhotoServiceProvider"
-            ],
-            "aliases": {
-
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "MichaelDojcar\\LaravelPhoto\\": "src/"
-        }
-    },
-    "require": {
-        "bkwld/croppa": "^4.9"
-    },
-    "require-dev": {
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.5"
+  "name": "michaeldojcar/laravel-photo",
+  "description": "Laravel photo module",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michael Dojčár",
+      "email": "michaeldojcar@gmail.com"
     }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MichaelDojcar\\LaravelPhoto\\Providers\\PhotoServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "MichaelDojcar\\LaravelPhoto\\": "src/"
+    }
+  },
+  "require": {
+    "bkwld/croppa": "^4.9"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.5"
+  }
 }

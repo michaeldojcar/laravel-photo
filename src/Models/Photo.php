@@ -1,6 +1,6 @@
 <?php
 
-namespace MichaelDojcar\LaravelPhotos\Photo\Entities;
+namespace MichaelDojcar\LaravelPhoto\Models;
 
 use Croppa;
 use Illuminate\Database\Eloquent\Model;
