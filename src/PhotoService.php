@@ -29,7 +29,7 @@ class PhotoService
     public function create(string $name, UploadedFile $file, string $description = null): Photo
     {
         // 1. Save photo to storage.
-        $image_name = $file->hashName() . '.' . $file->getClientOriginalExtension();
+        $image_name = $file->hashName();
         $file->storeAs('public/photos', $image_name);
 
         // 2. Make model.

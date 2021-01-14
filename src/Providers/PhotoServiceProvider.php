@@ -31,6 +31,7 @@ class PhotoServiceProvider extends ServiceProvider
 
             $this->publishes([
                 __DIR__ . '/../../config/photo.php' => config_path('photo.php'),
+                __DIR__ . '/../../config/croppa.php' => config_path('croppa.php'),
             ], 'config');
 
         }
