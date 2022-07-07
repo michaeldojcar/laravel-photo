@@ -24,7 +24,7 @@
     }
   },
   "require": {
-    "bkwld/croppa": "^4.9"
+    "bkwld/croppa": "^6.0"
   },
   "require-dev": {
     "orchestra/testbench": "^6.0",
